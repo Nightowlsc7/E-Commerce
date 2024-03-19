@@ -4,6 +4,7 @@ import style from '../css/NavBare.css'
 const NavBare = () => {
   return (
     <div>
+     
       
     </div>
   )
