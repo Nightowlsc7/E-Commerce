@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import axios from 'axios'
+import Cart from './components/Cart.jsx'
+// import NavBare from './components/NavBare.jsx'
+import Home from './components/Home.jsx'
 import $ from 'jquery'
 
 
@@ -15,8 +19,23 @@ const App = () => {
   };
   return (
     <div>
-      <h1>test</h1>
+       <div className="nav">
+        <span
+          className="logo"
+          onClick={() => {
+            switchView("Home");
+            // fetch();
+          }}
+        >
+          Home
+        </span>
+        <span className="items" onClick={() => switchView("🛒")}>
+          🛒
+        </span>
     
+      </div>
+      {view === "🛒" && <Cart />}
+      {view === "Home" && <Home />}
     </div>
   )
 }
