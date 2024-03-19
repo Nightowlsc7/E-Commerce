@@ -21,7 +21,7 @@ async function connectionTest (){
 
 db.Profile=require('./profileModel')(connection,DataTypes)
 
- //connection.sync({force:true}) 
+//  connection.sync({force:true}) 
 
 
 module.exports = db;
