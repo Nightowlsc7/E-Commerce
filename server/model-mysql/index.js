@@ -1,9 +1,7 @@
 const mysql = require('mysql2');
 const { Sequelize, DataTypes } = require('sequelize');
 
-const connection = new Sequelize('greenfield', 'Amine', 'wess2004wess', {
-
-
+const connection = new Sequelize('greenfield', 'root', 'Baha1998@', {
   host: 'localhost',
   dialect:'mysql'
 });
