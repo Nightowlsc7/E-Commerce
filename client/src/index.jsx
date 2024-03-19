@@ -37,7 +37,8 @@ const App = () => {
 
   return (
     <div>
-            <About/>
+      <h1>test</h1>
+    
     </div>
   )
 }

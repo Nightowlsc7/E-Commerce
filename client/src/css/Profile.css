@@ -1,0 +1,67 @@
+.nonPsw {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pass {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ftSection {
+    width: 350px;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 260px;
+}
+.Cbtn{
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+}
+
+.btn-container {
+    text-align: center;
+}
+.sdSection{
+    height: 40px;
+    width: 700px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.proEdit{
+    margin-left: 260px;
+}
+.updateContainer{
+    margin-top: 200px;
+    margin-left: 300px;
+}
+
