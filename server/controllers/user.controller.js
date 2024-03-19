@@ -17,7 +17,13 @@ module.exports = {
             return res.status(400).send('Email is already associated with an account');
         }
         const hashedPassword = await bcrypt.hash(password, 15);
-        const user = await db.User.create({ firstName,lastName,email,password :hashedPassword });        
+        const user = await db.User.create({ firstName,lastName,email,password:hashedPassword});    
+        const token = jwt.sign({ userId: user.id }, 'your-secret-key', {expiresIn: '1h',});
+        const User = await db.User.update({autoTokens:token},{
+            where: {
+               id:user.id
+            }
+        })    
         res.status(201).send(user);
         } catch (error) {
         res.status(500).json({ error: 'Registration failed' });
@@ -40,16 +46,43 @@ module.exports = {
         if (!passwordMatch) {
         return res.status(401).json({ error: 'Authentication failed' });
         }
-        const token = jwt.sign({ userId: user.id }, 'your-secret-key', {
-        expiresIn: '1h',
-        });
-        res.status(200).json({ token });
+        const token = jwt.sign({ userId: user.id }, 'your-secret-key', {expiresIn: '1h',});
+        const User = await db.User.update({autoTokens:token},{
+            where: {
+               id:user.id
+            }
+        })
+
+        res.status(200).json({user:user,token:token });
         } catch (error) {
         res.status(500).json({ error: 'Login failed' });
         }
 
- },
- 
+ }, 
+ loginProfile:async function (req,res){
+    res.send(req.user)  
+
+ }, 
+ logoutProfile:async function (req,res){
+   try {
+    
+    req.user.autoTokens=""
+    await req.user.save()
+
+     res.send("lOG OUT") 
+   } catch (error) {
+    res.status(500).send(error)
+    
+   } 
+
+ }, 
+
+
+
+
+
+
+
  addOne:async function(req,res){
     try {
         const user= await db.User.create(req.body)
@@ -67,7 +100,6 @@ module.exports = {
  deleteOne:async function(req,res){    
  },
  UpdateOne :async function(req,res){
-
  },
  selectAll :async function(req,res){
     try {
@@ -103,7 +135,6 @@ module.exports = {
     }
     catch { (error)=> { throw error} }
  },
-
  SelectByCategory:async function(req,res){
  try { 
     const findcateg=req.params.category
@@ -112,5 +143,4 @@ module.exports = {
     }
     catch { (error)=> { throw error} }
  },
-
  }
