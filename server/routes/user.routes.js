@@ -3,12 +3,12 @@ const verifyToken=require('../middleware/middleware.Authentication')
 
 
 
-const {selectAll,selectOne,addOne,deleteOne,UpdateOne,register,login,SelectByName, SelectByCategory,selectByColor}=require('../controllers/user.controller')
+const {selectAll,selectOne,addOne,deleteOne,UpdateOne,register,login}=require('../controllers/user.controller')
 
-router.get("/SearchByColor/:color",selectByColor)
-router.get("/SearchById/:id",selectOne)
-router.get("/SearchByName/:name",SelectByName)
-router.get("/SearchByCategory/:name",SelectByCategory)
+// router.get("/SearchByColor/:color",selectByColor)
+// router.get("/SearchById/:id",selectOne)
+// router.get("/SearchByName/:name",SelectByName)
+// router.get("/SearchByCategory/:name",SelectByCategory)
 
 router.get("/",verifyToken,selectAll);
 router.post("/register",register);
