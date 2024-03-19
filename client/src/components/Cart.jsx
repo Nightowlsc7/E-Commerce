@@ -1,47 +1,52 @@
-import React from 'react'
-import style from '../components/Cart.jsx'
+import React,{useState}from 'react'
+import style from '../css/Cart.css'
+import parse from 'html-react-parser';
+
 
 function Cart(props) {
-    
+   const [cart, setCart] = useState([]);
+
+//     const fetchOneItem = (id) => {
+//         axios.get(`http://localhost:3000/api/product/${id}`)
+//           .then((response) => {
+//             console.log(response.data);
+//           })
+//           .catch((error) => {
+//             console.error(error);
+//           });
+//       };
   return (
     
-    <div className="cart-list">
+    <div className="cart-list"> 
         <div  className="Cart-Main-Section">
         <p>Product</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Subtotal</p>
-        <div  className="Cart-Button-1">
-            <button className='Cart-Button-1'></button>
-            <button className='Cart-Button-1' ></button>
         </div>
-        </div>
-        <div>
-        {/* { props.data.map((element)=>{
-                return <div key={element._id}>
-                    <p>{element.price}</p>
-                   
-                </div>
-            })
-        } */}
+        <div className="test">
+        <h1></h1>
     </div>
-    <div>
+    <div className="container">
         <div   className="input-apply">
          <input id='input' type="text" />
-         <button className='Cart-Button2'>Apply Coupon</button>
+         <button className='Cart-Button3'>Apply Coupon</button>
         </div>
+
         <div className="cart-total">
-                <div className="subtotal">
+            <h5>Cart Total</h5>
+            <br />
+                <h6>
                     Subtotal: 
-                </div>
+                </h6>
                 <hr className="divider" />
-                <div className="shipping">
+                <h6>
                     Shipping: 
-                </div>
+                </h6>
                 <hr className="divider" />
-                <div className="total">
+                <h6>
                     Total:
-                </div>
+                </h6>
                 <button className='Checkout'>Proceed to Checkout</button>
             </div>
     </div>
