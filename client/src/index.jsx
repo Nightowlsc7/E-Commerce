@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import About from './components/about.jsx'
+import axios from 'axios'
 import $ from 'jquery'
 
 
@@ -35,8 +37,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>test</h1>
-    
+            <About/>
     </div>
   )
 }
