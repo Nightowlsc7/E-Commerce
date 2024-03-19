@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import $ from 'jquery'
-
+import Wishlist from './components/Wishlist.jsx'
 
 const App = () => {
   const [data, setData] = useState([])
