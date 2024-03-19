@@ -1,9 +1,9 @@
 import React from 'react'
+// import style from '../css/About.css'
 function About() {
   return (
     <div>
-        Home
-<br /><br /><br /><br />
+        
 
 <div className="card mb-3" >
   <div className="row g-0">
