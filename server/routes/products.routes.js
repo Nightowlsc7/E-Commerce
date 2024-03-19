@@ -5,9 +5,6 @@ const router = require('express').Router();
 
 const {selectAll,selectOne,addOne,deleteOne,UpdateOne}=require('../controllers/products.controller')
 
-
-
-
 router.get("/",selectAll);
 router.get("/",selectOne);
 router.post("/",addOne);

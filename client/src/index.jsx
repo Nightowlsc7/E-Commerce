@@ -5,6 +5,7 @@ import Cart from './components/Cart.jsx'
 // import NavBare from './components/NavBare.jsx'
 import Home from './components/Home.jsx'
 import $ from 'jquery'
+import Wishlist from './components/Wishlist.jsx'
 
 
 const App = () => {
