@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import Search from './components/search.jsx'
-import About from './components/about.jsx'
-
 import $ from 'jquery'
 
 
@@ -38,8 +35,7 @@ const App = () => {
 
   return (
     <div>
-         <Search searchName={SelectByName}  />
-         <About/>
+      <h1>test</h1>
     
     </div>
   )
