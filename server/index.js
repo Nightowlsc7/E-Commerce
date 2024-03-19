@@ -1,8 +1,7 @@
 const express = require("express");
-const userRoutes = require('./routes/user.routes')
-
-
+const router = require('./routes/routes')
 const db = require('./model-mysql/index');
+
 
 
 const app = express();
@@ -15,8 +14,7 @@ app.use(express.static(__dirname + "/../client/dist"));
 
 
 
-app.use("/api/user", userRoutes);
-app.use("/api/product", productRoutes);
+app.use("/api/user", router);
 
 
 
