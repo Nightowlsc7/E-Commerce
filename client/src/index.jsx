@@ -6,7 +6,6 @@ import Justforyou from './components/Justforyou.jsx'
 import axios from 'axios'
 import NavBare from './components/NavBare.jsx'
 import Home from './components/Home.jsx'
-import $ from 'jquery'
 import Cart from './components/Cart.jsx'
 import Profile from './components/Profile.jsx'
 import SingUp from './components/SingUp.jsx'
@@ -18,7 +17,7 @@ const App = () => {
 
 
   useEffect(() => {
-   
+
   }, [])
 
 
@@ -28,26 +27,26 @@ const App = () => {
 
 
   // const SelectByCategory = (name) => {
-  //   axios.get(`http://localhost:3000/api/product/SearchByCategory/${name}`)
-    
+  //   axios.get(http://localhost:3000/api/product/SearchByCategory/${name})
+
   //     .then((res) =>   setData(res.data))
   //     .catch((err) => console.log(err))
   // } 
   //  const SelectByName = (name) => {
-  //   axios.get(`http://localhost:3000/api/product/SearchByName/${name}`)
-    
+  //   axios.get(http://localhost:3000/api/product/SearchByName/${name})
+
   //     .then((res) =>   setData(res.data))
   //     .catch((err) => console.log(err))
   // }
 
   // const selectOne = (id) => {
-  //   axios.get(`http://localhost:3000/api/product/SearchById/${id}`)
-    
+  //   axios.get(http://localhost:3000/api/product/SearchById/${id})
+
   //     .then((res) =>   setData(res.data))
   //     .catch((err) => console.log(err))
   // }
   return (
-    
+
     <div>
       <NavBare switchView ={switchView}/>
 
@@ -61,9 +60,9 @@ const App = () => {
        {view === 'SingUp' && <SingUp  />}
 
 
-       
 
-    
+
+
     </div>
 
  
