@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import About from './components/about.jsx'
 import Search from './components/Search.jsx'
 import axios from 'axios'
+import Contact from './components/Contact.jsx'
 import Footer from "./components/Footer.jsx"
 import $ from 'jquery'
 
@@ -39,9 +40,10 @@ const App = () => {
 
   return (
     <div>
-      <Search/>
-      <h1>test</h1>
-    <About/>
+      {/* <Search/> */}
+      {/* <h1>test</h1> */}
+      <Contact/>
+    {/* <About/> */}
     <Footer/>
     </div>
   )
