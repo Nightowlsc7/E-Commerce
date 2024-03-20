@@ -1,6 +1,6 @@
 import React,{useState}from 'react'
 import style from '../css/Cart.css'
-import parse from 'html-react-parser';
+// import parse from 'html-react-parser';
 
 
 function Cart(props) {

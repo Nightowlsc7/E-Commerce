@@ -4,51 +4,69 @@ import About from './components/about.jsx'
 import Wishlist from './components/Wishlist.jsx'
 import Justforyou from './components/Justforyou.jsx'
 import axios from 'axios'
-import Cart from './components/Cart.jsx'
 import NavBare from './components/NavBare.jsx'
 import Home from './components/Home.jsx'
 import $ from 'jquery'
-import Wishlist from './components/Wishlist.jsx'
-import About from './components/about.jsx'
+import Cart from './components/Cart.jsx'
+import Profile from './components/Profile.jsx'
+import SingUp from './components/SingUp.jsx'
+
 
 
 const App = () => {
   const [data, setData] = useState([])
-   //change name (Home )
-   const [view, setView] = useState("Home");
+  const [view, setView] = useState("Home");
+
+
   useEffect(() => {
    
   }, [])
+
+
   const switchView = (option) => {
     setView(option);
   };
 
 
-  const SelectByCategory = (name) => {
-    axios.get(`http://localhost:3000/api/product/SearchByCategory/${name}`)
+  // const SelectByCategory = (name) => {
+  //   axios.get(`http://localhost:3000/api/product/SearchByCategory/${name}`)
     
-      .then((res) =>   setData(res.data))
-      .catch((err) => console.log(err))
-  } 
-   const SelectByName = (name) => {
-    axios.get(`http://localhost:3000/api/product/SearchByName/${name}`)
+  //     .then((res) =>   setData(res.data))
+  //     .catch((err) => console.log(err))
+  // } 
+  //  const SelectByName = (name) => {
+  //   axios.get(`http://localhost:3000/api/product/SearchByName/${name}`)
     
-      .then((res) =>   setData(res.data))
-      .catch((err) => console.log(err))
-  }
+  //     .then((res) =>   setData(res.data))
+  //     .catch((err) => console.log(err))
+  // }
 
-  const selectOne = (id) => {
-    axios.get(`http://localhost:3000/api/product/SearchById/${id}`)
+  // const selectOne = (id) => {
+  //   axios.get(`http://localhost:3000/api/product/SearchById/${id}`)
     
-      .then((res) =>   setData(res.data))
-      .catch((err) => console.log(err))
-  }
+  //     .then((res) =>   setData(res.data))
+  //     .catch((err) => console.log(err))
+  // }
   return (
+    
     <div>
-      <h1>test</h1>
+      <NavBare switchView ={switchView}/>
+
+       {view === 'Home' && <Home switchView={switchView} />}
+       {view === 'Contact' && <Home  />}
+       {view === 'About' && <About  />}
+       {view === 'Sign Up' && <Home  />}
+       {view === 'Cart' && <Cart  />}
+       {view === 'Wishlist' && <Wishlist  />}
+       {view === 'Profile' && <Profile  />}
+       {view === 'SingUp' && <SingUp  />}
+
+
+       
+
     
     </div>
- </div>
+
  
   )
 }

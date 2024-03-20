@@ -21,11 +21,11 @@ const fetch=()=>{
 
 useEffect(()=>fetch(),[])
 
-const handleUpdate=(id)=>{
-  axios.put(`http://localhost:3000/api/user/profile/${id}`,profile)
-  .then(res=>console.log(res))
-  .catch(err=>console.log(err))
-}
+// const handleUpdate=(id)=>{
+//   axios.put(`http://localhost:3000/api/user/profile/${id}`,profile)
+//   .then(res=>console.log(res))
+//   .catch(err=>console.log(err))
+// }
 
 const handleChange=(e)=>{
   setProfile([e.target.name]=e.target.value)
@@ -56,7 +56,7 @@ const handleChange=(e)=>{
         <input className='sdSection'  type="password" placeholder='Confirm New Password' onChange={handleChange}/><br />
       </form>
       </section>
-      <button className='btn' onClick={()=>handleUpdate(data.id)}>Save Changes</button>
+      <button className=' btn profile-btn' onClick={()=>handleUpdate(data.id)}>Save Changes</button>
       <button className='Cbtn'>Cancel</button>
     </div>
 }
