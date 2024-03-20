@@ -1,5 +1,3 @@
-
-
 const db = require('../model-mysql/index')
 const axios = require('axios')
 
@@ -16,7 +14,7 @@ selectAll :async function(req,res){
         
     }
 
-    },
+    },   
 selectOne: async function(req, res) {
     try {
         const product = await db.products.findOne({ where: { id: req.params.id } })
