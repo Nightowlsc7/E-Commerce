@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const { Sequelize, DataTypes } = require('sequelize');
 
-const connection = new Sequelize('greenfield', 'Amine', 'wess2004wess', {
+const connection = new Sequelize('greenfield', 'root', 'Baha1998@', {
   host: 'localhost',
   dialect:'mysql'
 });
@@ -22,7 +22,7 @@ async function connectionTest (){
 db.User=require('./user.Model')(connection,DataTypes)
 db.Products=require('./product.Model')(connection,DataTypes)
 
-//  connection.sync({force:true}) 
+ //connection.sync({force:true}) 
 
 
 module.exports = db;
