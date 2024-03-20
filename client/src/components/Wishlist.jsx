@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import style from '../css/Wishlist.css'
+// import style from '../css/Wishlist.css'
 
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -33,7 +33,7 @@ const Wishlist = () => {
         setUpdater(!updater);
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error); 
       });
   };
 

@@ -1,5 +1,3 @@
-
-
 const db = require('../model-mysql/index')
 const axios = require('axios')
 
@@ -8,7 +6,7 @@ module.exports = {
 
 selectAll :async function(req,res){
     try {
-        const product= await db.products.findAll({})
+        const product= await db.Products.findAll({})
         res.status(200).send(product)
         
     } catch (error) {
@@ -16,10 +14,10 @@ selectAll :async function(req,res){
         
     }
 
-    },
+    },   
 selectOne: async function(req, res) {
     try {
-        const product = await db.products.findOne({ where: { id: req.params.id } })
+        const product = await db.Products.findOne({ where: { id: req.params.id } })
             res.status(200).json(product);
     
     } catch (error) {
@@ -29,7 +27,7 @@ selectOne: async function(req, res) {
     },
 addOne:async function(req,res){
     try {
-        const product = await db.products.create(req.body)
+        const product = await db.Products.create(req.body)
     
     res.status(201).send(product)
     } catch (error) {
@@ -38,7 +36,7 @@ addOne:async function(req,res){
     },
 deleteOne:async (req, res) => {
     try {
-    const product = await db.products.destroy({
+    const product = await db.Products.destroy({
         where: { id: req.params.id },
     })
 
@@ -49,7 +47,7 @@ deleteOne:async (req, res) => {
     },
 UpdateOne :async (req, res) => {
     try {
-    const product = await db.products.update(req.body, {
+    const product = await db.Products.update(req.body, {
         where: { id: req.params.id },
     })
 
