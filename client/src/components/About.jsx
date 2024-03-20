@@ -130,8 +130,8 @@ function About() {
     </div>
   </div>
   <div className="col">
-    <div className="card h-100">
-      <img src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
+    <div className="card">
+      <img style={{height:"450px"}}src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
       <div className="card-body">
         <h5 className="card-title">Will</h5>
         <p className="card-text">
@@ -161,7 +161,7 @@ function About() {
 
 <div className="row row-cols-1 row-cols-md-3 g-4">
 <div className="col">
-  <div className="card h-100">
+  <div className="card ">
   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-truck" viewBox="0 0 16 16">
   <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
 </svg>     <div className="card-body">
