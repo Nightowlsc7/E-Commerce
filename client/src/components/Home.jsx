@@ -1,10 +1,11 @@
 import React from 'react'
+import NavBare from './NavBare.jsx'
 // import style from '../css/Home.css'
 
-const Home = () => {
+const Home = (props) => {
+  // {switchView}
   return (
     <div>
-      <h1>Home page</h1>
     </div>
   )
 }
