@@ -42,25 +42,8 @@ const App = () => {
   }
   return (
     <div>
-    <div className="nav">
-     <span
-       className="logo"
-       onClick={() => {
-         switchView("Home");
-         // fetch();
-       }}
-     >
-       Home
-     </span>
-     <span className="items" onClick={() => switchView("🛒")}>
-       🛒
-     </span>
- 
-   </div>
-   {view === "🛒" && <Cart />}
-   {view === "Home" && <Home />}
-   <div>
-{/* <Wishlist/>     */}
+      <Wishlist/>
+    
     </div>
  </div>
  
