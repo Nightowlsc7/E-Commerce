@@ -3,34 +3,39 @@ import style from '../css/About.css'
 function About() {
   return (
     <div>
-        
+   
+   <div className="swiper-container">
+    <div className="swiper-wrapper">
+        <div className="swiper-slide">
+            <div className="row g-0">
+                <div className="col-md-8">
+                    <div className="card-bodyy">
+                      <center> <h1 className="card-title">Our Story</h1></center> 
+      <p className="card-text">Launched in 2015, Exclusive is South Asia's premier online shopping marketplace with an active presence in Bangladesh. Supported by a wide range of tailored marketing, data, and service solutions, Exclusive has 10,500 sellers and 300 brands and serves 3 million customers across the region.</p>
+                        <p className="card-text"><small className="text-muted">Exclusive has more than 1 million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer.</small></p>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <img src="https://s3-alpha-sig.figma.com/img/fcc8/9aaa/7b85f8c1dcce81e71e2eb178be13bd4d?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CfXTjQO0~85gMbv8nrG8q~nijGtjXSFooCI0IPIR9GWsJkVkx5HJ8q3EywQ5knq9ZM7na7uOVnjJ9J6uPZXvEg1JkdyPtlNBM7hE4vqqeryzFT0hcywBlaLJhrmMlvqVAn0Kn8FprRg1EO06LVel2MDWNolyCp8HmMBUPjJ4wFtclGxbPTWoS3iu1ihRfbCI6ogKsk86zl8D5pBGuf1dM2SumPhv82KSIU2D~CI7jiFTy9SGc6A7m2ThZHWLkUx68uefKHsdJpA817S4BtUIUdpeO9I0hhJ4BlqbDZJ6XRgN0PKufZgWojPXK4CCux7-YZ80XJpsNPueH4MZN8q1vQ__" class='img-fluid rounded-start' alt="" />
+                </div>
+            </div>
+        </div>
+       
+    </div>
 
-<div className="card mb-3" >
-  <div className="row g-0">
-    <div className="col-md-4">
-     <img src="https://s3-alpha-sig.figma.com/img/fcc8/9aaa/7b85f8c1dcce81e71e2eb178be13bd4d?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CfXTjQO0~85gMbv8nrG8q~nijGtjXSFooCI0IPIR9GWsJkVkx5HJ8q3EywQ5knq9ZM7na7uOVnjJ9J6uPZXvEg1JkdyPtlNBM7hE4vqqeryzFT0hcywBlaLJhrmMlvqVAn0Kn8FprRg1EO06LVel2MDWNolyCp8HmMBUPjJ4wFtclGxbPTWoS3iu1ihRfbCI6ogKsk86zl8D5pBGuf1dM2SumPhv82KSIU2D~CI7jiFTy9SGc6A7m2ThZHWLkUx68uefKHsdJpA817S4BtUIUdpeO9I0hhJ4BlqbDZJ6XRgN0PKufZgWojPXK4CCux7-YZ80XJpsNPueH4MZN8q1vQ__" className='img-fluid rounded-start' alt="" />
-    </div>
-    <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title"> Our Story</h5>
-        <p className="card-text">Launced in 2015, Exclusive is South Asias premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. </p>
-        <p className="card-text"><small className="text-muted"> Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</small></p>
-      </div>
-    </div>
-  </div>
 </div>
-
- <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+<br /><br /><br /><br />
 {/* ------------------------------------ */}
 <section>    
       
-<div className="card-group">
+<div className="card-group"><br /><br /><br />
   <div className="card">
   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-shop" viewBox="0 0 16 16">
   <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
 </svg>
     <div className="card-body">
-      <h5 className="card-title">Sallers active our site</h5>
+      <h5 className="card-title">
+     Sallers active our site</h5>
     </div>
     <div className="card-footer">
       <small className="text-muted"></small>
@@ -77,7 +82,7 @@ function About() {
 </section>
 {/* ---------------------------------- */}
     
- <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> <br /> <br /> <br />
 
  <div className="row row-cols-1 row-cols-md-3 g-4">
   <div className="col">
@@ -151,7 +156,7 @@ function About() {
 
 
 {/* -------------------------------------- */}
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br />
 
 
 <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -202,11 +207,8 @@ function About() {
     </div>
   </div>
 </div>
-</div> 
+</div>  
 {/* ------------------------------------------- */}
-
-
-
 
     </div>
   )

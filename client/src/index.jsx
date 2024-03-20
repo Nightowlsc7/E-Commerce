@@ -12,7 +12,6 @@ import Profile from './components/Profile.jsx'
 import SingUp from './components/SingUp.jsx'
 
 
-
 const App = () => {
   const [data, setData] = useState([])
   const [view, setView] = useState("Home");

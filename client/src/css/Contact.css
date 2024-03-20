@@ -1,0 +1,28 @@
+textarea.form-control{
+    height: 207px;
+    width: 730px;
+}
+.col-md-6{
+    width: 235px;
+}
+.mb-4{ display: inline;}
+
+#contact-form{
+margin: 59px 0px 0px 29px }
+/* Contact Form Styles */
+#contact-form {
+   margin-left: 45px;
+    max-width: 700px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+
+  
+/* button{background-color: #DB4444;} */
