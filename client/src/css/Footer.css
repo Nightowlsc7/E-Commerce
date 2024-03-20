@@ -1,0 +1,22 @@
+.main-footer {
+    color: white;
+    background-color: #000000;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+  }
+
+
+  .email {
+    width: 230px;
+    border-style: solid;
+    color: white;
+    background-color: rgb(21, 20, 20);
+  }  
+  .email .input{
+ background-color: black;
+  }
+  .row {
+    text-align: center;}

@@ -69,7 +69,7 @@ function Profile() {
         <input className='sdSection'  type="password" name='confirmPassword' placeholder='Confirm New Password'/><br />
       </form>
       </section>
-      <button className='btn' onClick={()=>handleUpdate(data.id)}>Save Changes</button>
+      <button className=' btn profile-btn' onClick={()=>handleUpdate(data.id)}>Save Changes</button>
       <button className='Cbtn'>Cancel</button>
     </div>
 

@@ -16,7 +16,7 @@ app.post('/api/initiate-payment', async (req, res) => {
         headers: {
           Authorization: `Bearer YOUR_FLOUCI_API_KEY`,
         },
-      }
+      } 
     );
 
     // Send Flouci's response back to the client

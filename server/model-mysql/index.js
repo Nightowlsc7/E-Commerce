@@ -19,9 +19,9 @@ async function connectionTest (){
 
   const db={}
 
-db.Profile=require('./profileModel')(connection,DataTypes)
+db.User=require('./user.Model')(connection,DataTypes)
 
-//  connection.sync({force:true}) 
+ //connection.sync({force:true}) 
 
 
 module.exports = db;
