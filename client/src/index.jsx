@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import About from './components/about.jsx'
+import Wishlist from './components/Wishlist.jsx'
+import Justforyou from './components/Justforyou.jsx'
 import axios from 'axios'
 import Cart from './components/Cart.jsx'
 import NavBare from './components/NavBare.jsx'
@@ -42,7 +45,7 @@ const App = () => {
   }
   return (
     <div>
-      <Wishlist/>
+      <h1>test</h1>
     
     </div>
  </div>
