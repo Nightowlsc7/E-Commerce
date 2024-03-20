@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import About from './components/about.jsx'
 import axios from 'axios'
+import Cart from './components/Cart.jsx'
+import NavBare from './components/NavBare.jsx'
+import Home from './components/Home.jsx'
 import $ from 'jquery'
 import Wishlist from './components/Wishlist.jsx'
+import About from './components/about.jsx'
 
 
 const App = () => {
   const [data, setData] = useState([])
+   //change name (Home )
+   const [view, setView] = useState("Home");
   useEffect(() => {
    
   }, [])
-
-
+  const switchView = (option) => {
+    setView(option);
+  };
 
 
   const SelectByCategory = (name) => {
@@ -34,13 +40,13 @@ const App = () => {
       .then((res) =>   setData(res.data))
       .catch((err) => console.log(err))
   }
-
-
   return (
     <div>
       <Wishlist/>
     
     </div>
+ </div>
+ 
   )
 }
 
