@@ -1,0 +1,127 @@
+.wishlist-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wishlist-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .move-to-bag-button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .move-to-bag-button:hover {
+    background-color: #060605;
+  }
+  
+  .wishlist-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .wishlist-item {
+    position: relative;
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .item-details {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .item-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f00;
+  }
+  
+  .remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: rgb(251, 251, 251);
+  }
+  
+  .add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #060605;
+  }
+  
+  .move-to-bag-button {
+    background-color: #f0ebeb;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .move-to-bag-button:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+  }
