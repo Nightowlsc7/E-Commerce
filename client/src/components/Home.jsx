@@ -5,8 +5,11 @@ import NavBare from './NavBare.jsx'
 const Home = (props) => {
   // {switchView}
   return (
-    <div>
-    </div>
+    <section>
+      
+
+
+    </section>
   )
 }
 

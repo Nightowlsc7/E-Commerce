@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import About from './components/about.jsx'
+import About from './components/About.jsx'
 import Wishlist from './components/Wishlist.jsx'
 import Justforyou from './components/Justforyou.jsx'
 import axios from 'axios'
@@ -9,6 +9,8 @@ import Home from './components/Home.jsx'
 import Cart from './components/Cart.jsx'
 import Profile from './components/Profile.jsx'
 import SingUp from './components/SingUp.jsx'
+import Contact from './components/Contact.jsx'
+import  Footer  from './components/Footer.jsx'
 
 
 const App = () => {
@@ -51,13 +53,16 @@ const App = () => {
       <NavBare switchView ={switchView}/>
 
        {view === 'Home' && <Home switchView={switchView} />}
-       {view === 'Contact' && <Home  />}
+       {view === 'Contact' && <Contact  />}
        {view === 'About' && <About  />}
        {view === 'Sign Up' && <Home  />}
        {view === 'Cart' && <Cart  />}
        {view === 'Wishlist' && <Wishlist  />}
        {view === 'Profile' && <Profile  />}
        {view === 'SingUp' && <SingUp  />}
+
+
+       {/* <Footer/> */}
 
 
 

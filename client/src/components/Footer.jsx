@@ -14,7 +14,7 @@ function Footer() {
               <h4>Get 10% off your first order</h4>
             </h1>
             <div className="email"> <input type="text" placeholder="enter your email" /> 
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor" className="bi bi-send" viewBox="0 0 16 16">
             <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
             </svg></button></div> 
            </div>
@@ -54,7 +54,7 @@ function Footer() {
             <h4>Download App</h4>
             <ui className="list-unstyled">
             <li>Save S3 with App new Only</li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" className="bi bi-qr-code" viewBox="0 0 16 16">
   <path d="M2 2h2v2H2z"/>
   <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"/>
   <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"/>
