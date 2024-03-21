@@ -1,125 +1,72 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import Link from 'next/link';
 
-const PaymentComponent = () => {
-  const [loading, setLoading] = useState(false);
-  const [paymentStatus, setPaymentStatus] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+const Page = () => {
+  const [paymentStatus, setPaymentStatus] = useState('error'); // Change 'error' to 'success' for successful payment
 
-  const [paymentDetails, setPaymentDetails] = useState({
-    name: '',
-    email: '',
-    cardNumber: '',
-    expirationDate: '',
-    cvv: ''
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setPaymentDetails({
-      ...paymentDetails,
-      [name]: value
-    });
-  };
-
-  const initiatePayment = async () => {
-    setLoading(true);
-    setPaymentStatus(null);
-    setErrorMessage('');
-
-    try {
-      const response = await axios.post(
-        'https://api.flouci.com/payments/initiate',
-        {
-          // Pass paymentDetails to the API
-          ...paymentDetails
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_FLOUCI_API_KEY}`,
-          },
-        }
-      );
-
-      if (response.data.success) {
-        // Payment initiation was successful
-        setPaymentStatus('success');
-        console.log('Payment initiated:', response.data.paymentId);
-      } else {
-        // Payment initiation failed
-        setPaymentStatus('error');
-        setErrorMessage(response.data.error);
-        console.error('Payment initiation failed:', response.data.error);
-      }
-    } catch (error) {
-      // Handle network errors or other issues
-      setPaymentStatus('error');
-      setErrorMessage('An error occurred. Please try again later.');
-      console.error('Error initiating payment:', error);
-    }
-    setLoading(false);
+  const handleTryAgain = () => {
+    // In a real application, this function might involve retrying the payment process with the payment gateway
+    // For demonstration, we'll simply simulate a successful payment after retrying
+    setPaymentStatus('success');
   };
 
   return (
-    <div>
-      <div>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={paymentDetails.name}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={paymentDetails.email}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div>
-        <label>Card Number:</label>
-        <input
-          type="text"
-          name="cardNumber"
-          value={paymentDetails.cardNumber}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div>
-        <label>Expiration Date:</label>
-        <input
-          type="text"
-          name="expirationDate"
-          value={paymentDetails.expirationDate}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div>
-        <label>CVV:</label>
-        <input
-          type="text"
-          name="cvv"
-          value={paymentDetails.cvv}
-          onChange={handleInputChange}
-        />
-      </div>
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="w-8/12">
+          {paymentStatus === 'error' && (
+            <form className="ui large-form">
+              <div className="ui icon negative message">
+                <i className="warning icon" />
+                <div className="content">
+                  <div className="header">Oops! Something went wrong.</div>
+                  <p>While trying to reserve money from your account</p>
+                </div>
+              </div>
+              <button
+                onClick={handleTryAgain}
+                className="w-full px-4 py-2 bg-teal-500 text-white text-lg font-bold uppercase rounded mt-4"
+              >
+                Try again
+              </button>
+            </form>
+          )}
 
-      {paymentStatus === 'success' && (
-        <div className="success-message">Payment initiated successfully!</div>
-      )}
-      {paymentStatus === 'error' && (
-        <div className="error-message">{errorMessage}</div>
-      )}
-      
-      <button onClick={initiatePayment} disabled={loading}>
-        {loading ? 'Processing...' : 'Initiate Payment'}
-      </button>
+          {paymentStatus === 'success' && (
+            <div className="bg-gray-100 h-screen">
+              <div className="bg-white p-6 md:mx-auto">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="text-green-600 w-16 h-16 mx-auto my-6"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z"
+                  ></path>
+                </svg>
+                <div className="text-center">
+                  <h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">
+                    Payment Done!
+                  </h3>
+                  <p className="text-gray-600 my-2">
+                    Thank you for completing your secure online payment.
+                  </p>
+                  <p>Have a great day!</p>
+                  <div className="py-10 text-center">
+                    <Link href="/client/dashboard/">
+                      <a className="px-12 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3">
+                        CONTINUE SHOPPING
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default PaymentComponent;
+export default Page;
