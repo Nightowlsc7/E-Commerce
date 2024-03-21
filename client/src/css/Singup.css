@@ -1,0 +1,31 @@
+.imgsingup{
+    
+   width: 100%;
+   height: 50rem;
+
+}
+.singupBox{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin-top: 6rem ;
+  
+    padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+.titleSingup{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.submit-btn{
+    width: 100%;
+    background-color: rgb(254, 61, 61);
+    border-color:  rgb(254, 61, 61);
+}
+.submit-btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 61, 61);
+    border-color:  rgb(254, 61, 61);
+}

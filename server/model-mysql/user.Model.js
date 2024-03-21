@@ -25,6 +25,10 @@ module.exports=(sequelize,DataTypes)=>{
       type: DataTypes.STRING,
       allowNull :false
     },
+    autoTokens:{
+      type: DataTypes.STRING,
+      allowNull :true
+    }
   });
   return User
 }

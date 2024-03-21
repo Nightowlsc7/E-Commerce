@@ -3,34 +3,39 @@ import style from '../css/About.css'
 function About() {
   return (
     <div>
-        
+   
+   <div className="swiper-container">
+    <div className="swiper-wrapper">
+        <div className="swiper-slide">
+            <div className="row g-0">
+                <div className="col-md-8">
+                    <div className="card-bodyy">
+                      <center> <h1 className="card-title">Our Story</h1></center> 
+      <p className="card-text">Launched in 2015, Exclusive is South Asia's premier online shopping marketplace with an active presence in Bangladesh. Supported by a wide range of tailored marketing, data, and service solutions, Exclusive has 10,500 sellers and 300 brands and serves 3 million customers across the region.</p>
+                        <p className="card-text"><small className="text-muted">Exclusive has more than 1 million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer.</small></p>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <img src="https://s3-alpha-sig.figma.com/img/fcc8/9aaa/7b85f8c1dcce81e71e2eb178be13bd4d?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CfXTjQO0~85gMbv8nrG8q~nijGtjXSFooCI0IPIR9GWsJkVkx5HJ8q3EywQ5knq9ZM7na7uOVnjJ9J6uPZXvEg1JkdyPtlNBM7hE4vqqeryzFT0hcywBlaLJhrmMlvqVAn0Kn8FprRg1EO06LVel2MDWNolyCp8HmMBUPjJ4wFtclGxbPTWoS3iu1ihRfbCI6ogKsk86zl8D5pBGuf1dM2SumPhv82KSIU2D~CI7jiFTy9SGc6A7m2ThZHWLkUx68uefKHsdJpA817S4BtUIUdpeO9I0hhJ4BlqbDZJ6XRgN0PKufZgWojPXK4CCux7-YZ80XJpsNPueH4MZN8q1vQ__" class='img-fluid rounded-start' alt="" />
+                </div>
+            </div>
+        </div>
+       
+    </div>
 
-<div className="card mb-3" >
-  <div className="row g-0">
-    <div className="col-md-4">
-     <img src="https://s3-alpha-sig.figma.com/img/fcc8/9aaa/7b85f8c1dcce81e71e2eb178be13bd4d?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CfXTjQO0~85gMbv8nrG8q~nijGtjXSFooCI0IPIR9GWsJkVkx5HJ8q3EywQ5knq9ZM7na7uOVnjJ9J6uPZXvEg1JkdyPtlNBM7hE4vqqeryzFT0hcywBlaLJhrmMlvqVAn0Kn8FprRg1EO06LVel2MDWNolyCp8HmMBUPjJ4wFtclGxbPTWoS3iu1ihRfbCI6ogKsk86zl8D5pBGuf1dM2SumPhv82KSIU2D~CI7jiFTy9SGc6A7m2ThZHWLkUx68uefKHsdJpA817S4BtUIUdpeO9I0hhJ4BlqbDZJ6XRgN0PKufZgWojPXK4CCux7-YZ80XJpsNPueH4MZN8q1vQ__" className='img-fluid rounded-start' alt="" />
-    </div>
-    <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title"> Our Story</h5>
-        <p className="card-text">Launced in 2015, Exclusive is South Asias premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. </p>
-        <p className="card-text"><small className="text-muted"> Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</small></p>
-      </div>
-    </div>
-  </div>
 </div>
-
- <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+<br /><br /><br /><br />
 {/* ------------------------------------ */}
 <section>    
       
-<div className="card-group">
+<div className="card-group"><br /><br /><br />
   <div className="card">
   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-shop" viewBox="0 0 16 16">
   <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
 </svg>
     <div className="card-body">
-      <h5 className="card-title">Sallers active our site</h5>
+      <h5 className="card-title">
+     Sallers active our site</h5>
     </div>
     <div className="card-footer">
       <small className="text-muted"></small>
@@ -77,7 +82,7 @@ function About() {
 </section>
 {/* ---------------------------------- */}
     
- <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> <br /> <br /> <br />
 
  <div className="row row-cols-1 row-cols-md-3 g-4">
   <div className="col">
@@ -125,8 +130,8 @@ function About() {
     </div>
   </div>
   <div className="col">
-    <div className="card h-100">
-      <img src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
+    <div className="card">
+      <img style={{height:"450px"}}src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
       <div className="card-body">
         <h5 className="card-title">Will</h5>
         <p className="card-text">
@@ -151,12 +156,12 @@ function About() {
 
 
 {/* -------------------------------------- */}
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br />
 
 
 <div className="row row-cols-1 row-cols-md-3 g-4">
 <div className="col">
-  <div className="card h-100">
+  <div className="card ">
   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-truck" viewBox="0 0 16 16">
   <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
 </svg>     <div className="card-body">
@@ -202,11 +207,8 @@ function About() {
     </div>
   </div>
 </div>
-</div> 
+</div>  
 {/* ------------------------------------------- */}
-
-
-
 
     </div>
   )
