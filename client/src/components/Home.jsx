@@ -1,9 +1,9 @@
-import React from 'react'
-import NavBare from './NavBare.jsx'
-// import style from '../css/Home.css'
+import React from 'react';
+import { Navbar, Nav, Card, Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/Home.css'
 
-const Home = (props) => {
-  // {switchView}
+const HomePage = () => {
   return (
     <section>
       
@@ -13,4 +13,4 @@ const Home = (props) => {
   )
 }
 
-export default Home
+export default HomePage;

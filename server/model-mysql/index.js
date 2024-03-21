@@ -16,7 +16,6 @@ async function connectionTest (){
   }
   }
   connectionTest()
-
   const db={}
 
 db.User=require('./user.Model')(connection,DataTypes)
