@@ -39,7 +39,6 @@ deleteOne:async (req, res) => {
     const product = await db.products.destroy({
         where: { id: req.params.id },
     })
-
     res.json(product);
     } catch (error) {
     throw error
@@ -54,7 +53,6 @@ UpdateOne :async (req, res) => {
     res.status(201).send(product)
     } catch (error) {
     throw error
-
 } 
 }
 }

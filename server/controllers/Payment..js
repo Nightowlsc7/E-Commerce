@@ -2,7 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 app.use(express.json());
 // Handle payment initiation request
 app.post('/api/initiate-payment', async (req, res) => {
@@ -18,7 +17,6 @@ app.post('/api/initiate-payment', async (req, res) => {
         },
       } 
     );
-
     // Send Flouci's response back to the client
     res.json(flouciResponse.data);
   } catch (error) {
@@ -27,7 +25,6 @@ app.post('/api/initiate-payment', async (req, res) => {
     res.status(500).json({ error: 'An error occurred. Please try again later.' });
   }
 });
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
