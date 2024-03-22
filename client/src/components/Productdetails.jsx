@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import style from "../css/Productdetails.css";
+import React, { useState } from 'react'
+import style from "../css/Productdetails.css"
 
 const productData = [
   {
@@ -27,33 +27,33 @@ const productData = [
     delivery: 'Free Delivery',
     returnPolicy: 'Free 30 Days Delivery Returns',
   }
-];
+]
 
 const ProductDetails = ({ product }) => {
-  const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(null)
+  const [quantity, setQuantity] = useState(1)
 
   const handleSizeClick = (size) => {
-    setSelectedSize(size === selectedSize ? null : size);
-  };
+    setSelectedSize(size === selectedSize ? null : size)
+  }
 
   const handleQuantityChange = (e) => {
-    setQuantity(parseInt(e.target.value, 10));
-  };
+    setQuantity(parseInt(e.target.value, 10))
+  }
 
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+    setQuantity(quantity + 1)
+  }
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity(quantity - 1)
     }
-  };
+  }
 
   const addItemToWishlist = (id) => {
-    console.log(`Item with id ${id} added to wishlist`);
-  };
+    console.log(`Item with id ${id} added to wishlist`)
+  }
 
   return (
     <div className="product-details">
@@ -123,12 +123,12 @@ const ProductDetails = ({ product }) => {
       </div>
       <img className='delevery' src="https://i.ibb.co/BrVBBQm/Screenshot-24.png" width="desired-width" height="desired-height" />
     </div>
-  );
-};
+  )
+}
 
 const ProductDetailsPage = () => {
-  const product = productData[0];
-  return <ProductDetails product={product} />;
-};
+  const product = productData[0]
+  return <ProductDetails product={product} />
+}
 
-export default ProductDetailsPage;
+export default ProductDetailsPage

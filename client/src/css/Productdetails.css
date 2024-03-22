@@ -2,7 +2,7 @@
     max-width: 2500px;
     margin: 0 auto;
     padding: 1rem;
-    border: 1px solid transparent; /* Set border color to transparent */
+    border: 1px solid transparent; 
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

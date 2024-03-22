@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
-import style from '../css/Wishlist.css';
+import React, { useEffect, useState } from "react"
+import axios from 'axios'
+import style from '../css/Wishlist.css'
 
 const JustForYou = () => {
-  const [justForYouItems, setJustForYouItems] = useState([]);
-  const [updater, setUpdater] = useState(false);
-  const [ratings, setRatings] = useState({}); 
+  const [justForYouItems, setJustForYouItems] = useState([])
+  const [updater, setUpdater] = useState(false)
+  const [ratings, setRatings] = useState({}) 
 
   const fetchItems = () => {
     axios.get("http://localhost:3000/api/justforyou/")
       .then((response) => {
-        setJustForYouItems(response.data);
+        setJustForYouItems(response.data)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  };
+        console.error(error)
+      })
+  }
 
   useEffect(() => {
-    fetchItems();
-  }, [updater]);
+    fetchItems()
+  }, [updater])
 
   const handleRatingChange = (itemId, rating) => {
-    setRatings({ ...ratings, [itemId]: rating });
-  };
+    setRatings({ ...ratings, [itemId]: rating })
+  }
 
   return (
     <div className="wishlist-container">
@@ -70,7 +70,7 @@ const JustForYou = () => {
       </ul>
   
     </div>
-  );
-};
+  )
+}
 
-export default JustForYou;
+export default JustForYou

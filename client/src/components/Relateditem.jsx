@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
-import style from '../css/Wishlist.css';
+import React, { useEffect, useState } from "react"
+import axios from 'axios'
+import style from '../css/Wishlist.css'
 
 const RelatedItem = () => {
-  const [Relateditem, setRelateditem] = useState([]);
-  const [updater, setUpdater] = useState(false);
-  const [ratings, setRatings] = useState({}); 
+  const [Relateditem, setRelateditem] = useState([])
+  const [updater, setUpdater] = useState(false)
+  const [ratings, setRatings] = useState({}) 
 
   const fetchItems = () => {
     axios.get("http://localhost:3000/api/justforyou/")
       .then((response) => {
-        setRelateditem(response.data);
+        setRelateditem(response.data)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  };
+        console.error(error)
+      })
+  }
 
   useEffect(() => {
-    fetchItems();
-  }, [updater]);
+    fetchItems()
+  }, [updater])
 
   const handleRatingChange = (itemId, rating) => {
-    setRatings({ ...ratings, [itemId]: rating });
-  };
+    setRatings({ ...ratings, [itemId]: rating })
+  }
 
   return (
     <div className="wishlist-container">
@@ -69,7 +69,7 @@ const RelatedItem = () => {
       </ul>
   
     </div>
-  );
-};
+  )
+}
 
-export default RelatedItem;
+export default RelatedItem

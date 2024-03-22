@@ -1,56 +1,54 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
-// import style from '../css/Wishlist.css'
+import React, { useEffect, useState } from "react"
+import axios from 'axios'
 
 const Wishlist = () => {
-  const [wishlistItems, setWishlistItems] = useState([]);
-  const [justForYouItems, setJustForYouItems] = useState([]);
-  const [updater, setUpdater] = useState(false);
+  const [wishlistItems, setWishlistItems] = useState([])
+  const [justForYouItems, setJustForYouItems] = useState([])
+  const [updater, setUpdater] = useState(false)
 
   const fetchItems = () => {
     axios.get("http://localhost:3000/api/product/")
       .then((response) => {
-        setWishlistItems(response.data);
+        setWishlistItems(response.data)
       })
       .catch((error) => {
-        console.error(error);
-      });
+        console.error(error)
+      })
 
-    // Assuming you have a similar API endpoint for justForYouItems
     axios.get("http://localhost:3000/api/justForYouItems")
       .then((response) => {
-        setJustForYouItems(response.data);
+        setJustForYouItems(response.data)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  };
+        console.error(error)
+      })
+  }
 
   const addItemToWishlist = (body) => {
-    console.log("addItemToWishlist", body);
+    console.log("addItemToWishlist", body)
     axios.post("http://localhost:3000/api/product/", body)
       .then(() => {
-        setUpdater(!updater);
+        setUpdater(!updater)
       })
       .catch((error) => {
-        console.error(error); 
-      });
-  };
+        console.error(error) 
+      })
+  }
 
   const removeItemFromWishlist = (id) => {
-    console.log("removeItemFromWishlist", id);
+    console.log("removeItemFromWishlist", id)
     axios.delete(`http://localhost:3000/api/product/${id}`)
       .then(() => {
-        setUpdater(!updater);
+        setUpdater(!updater)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  };
+        console.error(error)
+      })
+  }
 
   useEffect(() => {
-    fetchItems();
-  }, [updater]);
+    fetchItems()
+  }, [updater])
 
   return (
     <div className="wishlist-container">
@@ -98,7 +96,7 @@ const Wishlist = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Wishlist;
+export default Wishlist
