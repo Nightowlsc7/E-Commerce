@@ -6,13 +6,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .wishlist-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
   .wishlist-title {
     font-size: 2rem;
     font-weight: bold;
@@ -89,7 +82,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: transparent;
+    background-color: rgb(243, 243, 243);
     border: none;
     cursor: pointer;
     padding: 0.5rem;
@@ -118,14 +111,9 @@
     background-color: #060605;
   }
   
-  .bi-cart {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-  
   .move-to-bag-button {
-    background-color: #f0ebeb; 
-    color: #000000; 
+    background-color: #f0ebeb;
+    color: #000000;
     border: none;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -134,7 +122,6 @@
   }
   
   .move-to-bag-button:hover {
-    background-color: #f0f0f0; 
-    color: #000000; 
+    background-color: #f0f0f0;
+    color: #000000;
   }
-  
