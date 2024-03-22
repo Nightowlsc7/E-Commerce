@@ -59,7 +59,7 @@ const JustForYou = () => {
               </div>
             </div>
             <button className="eye" onClick={() => removeItemFromWishlist(item.id)}>
-            <i class="bi bi-eye"></i>
+            <i className="bi bi-eye"></i>
             </button>
             <button className="add-to-cart-button" onClick={() => addItemToWishlist(item.id)}>
               <i className="bi bi-cart"></i> 

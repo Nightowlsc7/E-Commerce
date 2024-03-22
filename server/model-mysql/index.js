@@ -16,11 +16,9 @@ async function connectionTest (){
   }
   }
   connectionTest()
-
   const db={}
 
 db.User=require('./user.Model')(connection,DataTypes)
-db.Products=require('./product.Model')(connection,DataTypes)
 
  //connection.sync({force:true}) 
 

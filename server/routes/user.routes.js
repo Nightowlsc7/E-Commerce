@@ -2,7 +2,6 @@ const router = require('express').Router();
 const verifyToken=require('../middleware/middleware.Authentication')
 
 
-
 const {selectAll,selectOne,addOne,deleteOne,UpdateOne,register,login,SelectByName, SelectByCategory,selectByColor,loginProfile,logoutProfile}=require('../controllers/user.controller')
 
 // router.get("/SearchByColor/:color",selectByColor)
