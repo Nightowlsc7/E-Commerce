@@ -10,6 +10,7 @@ const NavBare = (props) => {
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a className="navbar-brand" href="#">Exclusive</a>
+      <div className="col-8">
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         <li className="nav-item active">
           <a className="nav-link" href="#" onClick={()=>{props.switchView('Home')}}>Home</a>
@@ -24,12 +25,12 @@ const NavBare = (props) => {
           <a className="nav-link " href="#" onClick={()=>{props.switchView('SingUp')}} >Sign Up</a>
         </li>
       </ul>
-     <div style={{float:"left",marginLeft:"auto"}}>
-     <form className="form-inline my-2 my-lg-0" >
-        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      </div>
+     <div className='col-4' style={{float:"left",margin:"auto",display:"flex",gap:"1rem"}}>
+   
+        <input className="" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-     </div>
+     
      <ul className='navbar-nav mr-auto mt-2 mt-lg-0'>
      <li className="nav-item">
      <span className="nav-link" onClick={() => props.switchView('Cart')}>
@@ -43,6 +44,7 @@ const NavBare = (props) => {
           <a className="nav-link " href="#" onClick={()=>{props.switchView('Profile')}} >Profile</a>
         </li>
      </ul>
+     </div>
      
 
     </div>

@@ -78,16 +78,6 @@
  
 
 
-.card-img-top {
-
-  width:326px;
-  height: 392px;
-  gap: 32px;
-  opacity: 0px;
-
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
 .element.style {
   align-items: center;
 }
