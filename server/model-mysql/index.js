@@ -19,8 +19,10 @@ async function connectionTest (){
   const db={}
 
 db.User=require('./user.Model')(connection,DataTypes)
+db.Products=require('./user.Model')(connection,DataTypes)
 
- //connection.sync({force:true}) 
+
+//  connection.sync({force:true}) 
 
 
 module.exports = db;
