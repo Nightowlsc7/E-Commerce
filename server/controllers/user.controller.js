@@ -60,8 +60,7 @@ module.exports = {
 
  }, 
  loginProfile:async function (req,res){
-    res.send(req.user)  
-
+    res.send(req.user)
  }, 
  logoutProfile:async function (req,res){
    try {
@@ -75,14 +74,7 @@ module.exports = {
     
    } 
 
- }, 
-
-
-
-
-
-
-
+ },
  addOne:async function(req,res){
     try {
         const user= await db.User.create(req.body)
@@ -98,10 +90,24 @@ module.exports = {
  selectOne:async function(req,res){
  },
  deleteOne:async function(req,res){    
+    try {
+        let _id=req.params.id
+        const profile=db.Profile.destroy({where:{id:_id}})
+        res.json(profile)
+    } catch (err) {
+        throw err
+    }
  },
  UpdateOne :async function(req,res){
+    try {
+        let _id=req.params.id
+        const profile= await db.Profile.update(req.body,{where:{id:_id}})
+        res.status(201).send(profile)
+        } catch (error) {
+        throw error
+    }
  },
- selectAll :async function(req,res){
+ getAll :async function(req,res){
     try {
         const user= await db.User.findAll({})
         res.status(200).send(user)
@@ -111,36 +117,4 @@ module.exports = {
 
     }
  },
- selectByColor:async function(req,res){
-    try { 
-        const findColor=req.params.color
-        const project = await db.Product.findAll({ where: { color: findColor } })
-        res.send(project)
-    }
-    catch { (error)=> { throw error} }
- },
- selectOne:async function(req,res){
-    try { 
-        const findId=req.params.id
-        const project = await db.Product.findAll({ where: { id: findId } })
-        res.send(project)
-    }
-    catch { (error)=> { throw error} }
- },
- SelectByName:async function(req,res){
-    try { 
-        const find=req.params.name
-        const project = await db.Product.findAll({ where: { name: find } })
-        res.send(project)
-    }
-    catch { (error)=> { throw error} }
- },
- SelectByCategory:async function(req,res){
- try { 
-    const findcateg=req.params.category
-        const project = await db.Product.findAll({ where: {  category :findcateg} })
-        res.send(project)
-    }
-    catch { (error)=> { throw error} }
- },
- }
+}

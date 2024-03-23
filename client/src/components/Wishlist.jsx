@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from 'axios'
 
-const Wishlist = () => {
+const Wishlist = ({wishlist}) => {
   const [wishlistItems, setWishlistItems] = useState([])
   const [justForYouItems, setJustForYouItems] = useState([])
   const [updater, setUpdater] = useState(false)
@@ -14,7 +14,6 @@ const Wishlist = () => {
       .catch((error) => {
         console.error(error)
       })
-
     axios.get("http://localhost:3000/api/justForYouItems")
       .then((response) => {
         setJustForYouItems(response.data)
@@ -23,7 +22,6 @@ const Wishlist = () => {
         console.error(error)
       })
   }
-
   const addItemToWishlist = (body) => {
     console.log("addItemToWishlist", body)
     axios.post("http://localhost:3000/api/product/", body)
@@ -34,7 +32,6 @@ const Wishlist = () => {
         console.error(error) 
       })
   }
-
   const removeItemFromWishlist = (id) => {
     console.log("removeItemFromWishlist", id)
     axios.delete(`http://localhost:3000/api/product/${id}`)
@@ -45,19 +42,17 @@ const Wishlist = () => {
         console.error(error)
       })
   }
-
   useEffect(() => {
     fetchItems()
   }, [updater])
-
   return (
     <div className="wishlist-container">
       <div className="wishlist-header">
-        <h1 className="wishlist-title">Wishlist ({wishlistItems.length})</h1>
+        <h1 className="wishlist-title">Wishlist ({wishlist.length})</h1>
         <button className="move-to-bag-button">Move All To Bag</button>
       </div>
       <ul className="wishlist-items">
-        {wishlistItems.map((item) => (
+        {wishlist.map((item) => (
           <li key={item.id} className="wishlist-item">
             <div className="item-details">
               <img src={item.imgUrl} alt={item.name} className="item-image" />

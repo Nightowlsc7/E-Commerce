@@ -56,5 +56,38 @@ UpdateOne :async (req, res) => {
     throw error
 
 } 
-}
+},
+
+ selectByColor:async function(req,res){
+    try { 
+        const findColor=req.params.color
+        const project = await db.Products.findAll({ where: { color: findColor } })
+        res.send(project)
+    }
+    catch { (error)=> { throw error} }
+ },
+ selectOne:async function(req,res){
+    try { 
+        const findId=req.params.id
+        const project = await db.Products.findAll({ where: { id: findId } })
+        res.send(project)
+    }
+    catch { (error)=> { throw error} }
+ },
+ SelectByName:async function(req,res){
+    try { 
+        const find=req.params.name
+        const project = await db.Products.findAll({ where: { name: find } })
+        res.send(project)
+    }
+    catch { (error)=> { throw error} }
+ },
+ SelectByCategory:async function(req,res){
+ try { 
+    const findcateg=req.params.category
+        const project = await db.Products.findAll({ where: {  category :findcateg} })
+        res.send(project)
+    }
+    catch { (error)=> { throw error} }
+ },
 }

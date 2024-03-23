@@ -29,11 +29,11 @@ const productData = [
   }
 ]
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product,OneProduct,addToWishList,addToCart }) => {
   const [selectedSize, setSelectedSize] = useState(null)
   const [quantity, setQuantity] = useState(1)
 
-  const handleSizeClick = (size) => {
+  const handleSizeClick = (size) => { 
     setSelectedSize(size === selectedSize ? null : size)
   }
 
@@ -51,15 +51,12 @@ const ProductDetails = ({ product }) => {
     }
   }
 
-  const addItemToWishlist = (id) => {
-    console.log(`Item with id ${id} added to wishlist`)
-  }
-
   return (
     <div className="product-details">
-      <h1 className="product-name">{product.name}</h1>
+      {console.log(OneProduct)}
+      <h1 className="product-name">{OneProduct.name}</h1>
       <div className="product-image-container">
-  <img className="product-image" src={product.image} alt={product.name} />
+  <img className="product-image" src={OneProduct.imgUrl} alt={OneProduct.name} />
 </div>
       <p className="product-reviews">
         {product.reviews}{' '}
@@ -73,7 +70,7 @@ const ProductDetails = ({ product }) => {
         </span>
       </p>
       <p className="product-stock-status">{product.stockStatus}</p>
-      <p className="product-price">{product.price}</p>
+      <p className="product-price">{OneProduct.price}</p>
       <h2 className="product-description-title">Description</h2>
       <ul className="product-description-list">
         {product.features.map((feature) => (
@@ -114,10 +111,10 @@ const ProductDetails = ({ product }) => {
       </div>
       <br />
       <div className="buttons-container">
-        <button className="add-to-cart-button" onClick={() => addItemToWishlist(product.id)}>
+        <button className="add-to-cart-button" onClick={() => addToCart(OneProduct)}>
           <i className="bi bi-cart"></i> Add to Cart
         </button>
-        <button className="wishlist-button" onClick={() => addItemToWishlist(product.id)}>
+        <button className="wishlist-button" onClick={() => addToWishList(OneProduct)}>
           <i className="bi bi-bookmark-heart-fill">To Wishlist</i> 
         </button>
       </div>
@@ -126,9 +123,9 @@ const ProductDetails = ({ product }) => {
   )
 }
 
-const ProductDetailsPage = () => {
+const ProductDetailsPage = (props) => {
   const product = productData[0]
-  return <ProductDetails product={product} />
+  return <ProductDetails product={product} OneProduct={props.OneProduct} addToWishList={props.addToWishList} addToCart={props.addToCart} />
 }
 
 export default ProductDetailsPage

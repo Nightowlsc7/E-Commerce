@@ -21,6 +21,24 @@ module.exports=(sequelize,DataTypes)=>{
       type: DataTypes.STRING,
       allowNull :false
     },
+    gendre: {
+      type: DataTypes.ENUM("Male","Female","None"),
+         allowNull: false,
+         defaultValue: "None",
+    },
+    location:{
+      type:DataTypes.STRING,
+      allowNull:true,
+      defaultValue: "None"
+    },
+    birthDay:{
+      type:DataTypes.DATE,
+    allowNull:true,
+  },
+  phoneNumber:{
+    type:DataTypes.INTEGER,
+    allowNull:true,
+  },
     autoTokens:{
       type: DataTypes.STRING,
       allowNull :true
