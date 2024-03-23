@@ -6,18 +6,7 @@ import ps from '../images/ps.png'
 // import parse from 'html-react-parser';
 
 
-function Cart(props) {
-   const [cart, setCart] = useState([]);
-
-//     const fetchOneItem = (id) => {
-//         axios.get(`http://localhost:3000/api/product/${id}`)
-//           .then((response) => {
-//             console.log(response.data);
-//           })
-//           .catch((error) => {
-//             console.error(error);
-//           });
-//       };
+function Cart({cart}) {
   return (
     
    <div className="container" style={{paddingTop:"10rem"}}>
@@ -36,14 +25,16 @@ function Cart(props) {
                 <p>Subtotal</p>
         </div>      
         </div>
-        <div className="row" style={{height:"150px"}}>
-            <div className="col-3">
-                <img  style={{width:"100px",height:"100px"}} src={screen} alt="" />
-                <span>LCD Monitor</span>
+     {cart.map((e)=>{
+        return(
+            <div className="row"  key={e.id} style={{height:"150px"}}>
+            <div className="col-3" >
+                <img  style={{width:"100px",height:"100px"}} src={e.imgUrl} alt="" />
+                <span>{e.name}</span>
             </div>
             <div className="col-3" style={{paddingTop:"1rem"}}>
                
-                <span>650$</span>
+                <span>{e.price}$</span>
             </div>
             <div className="col-3" style={{paddingTop:"1rem"}} >
                 
@@ -51,27 +42,12 @@ function Cart(props) {
             </div>
             <div className="col-3" style={{paddingTop:"1rem"}}>
                
-                <span>$650</span>
+                <span>{e.price}</span>
             </div>
         </div>
-        <div className="row" style={{height:"150px"}}>
-            <div className="col-3">
-                <img  style={{width:"100px",height:"100px"}} src={ps} alt="" />
-                <span>LCD Monitor</span>
-            </div>
-            <div className="col-3" style={{paddingTop:"1rem"}}>
-               
-                <span>650$</span>
-            </div>
-            <div className="col-3" style={{paddingTop:"1rem"}} >
-                
-            <input type="number" id="quantity" name="quantity" min="1" max="5"/>
-            </div>
-            <div className="col-3" style={{paddingTop:"1rem"}}>
-               
-                <span>$650</span>
-            </div>
-        </div>
+        )
+      })} 
+      
 
         
     <div className="container">

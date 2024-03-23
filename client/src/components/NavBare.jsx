@@ -1,6 +1,8 @@
 import React from 'react'
 import style from '../css/NavBare.css'
 import Wishlist  from '../images/heart.png'
+import user  from '../images/user.png'
+
 
 const NavBare = (props) => {
   return (
@@ -26,24 +28,29 @@ const NavBare = (props) => {
         </li>
       </ul>
       </div>
-     <div className='col-4' style={{float:"left",margin:"auto",display:"flex",gap:"1rem"}}>
-   
+     <div className='col-4' style={{float:"left",margin:"auto",display:"flex",gap:"1rem"}}>   
         <input className="" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-     
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>     
      <ul className='navbar-nav mr-auto mt-2 mt-lg-0'>
      <li className="nav-item">
+          <a className="nav-link " href="#" onClick={()=>{props.switchView('LogIn')}} >Log</a>
+      </li>
+     <li className="nav-item">
      <span className="nav-link" onClick={() => props.switchView('Cart')}>
-          🛒 CART
+          🛒
         </span>
         </li>
         <li className="nav-item">
-          <a className="nav-link " href="#" onClick={()=>{props.switchView('Wishlist')}} >Wishlist</a>
+          <a className="nav-link " href="#" onClick={()=>{props.switchView('Wishlist')}} >
+            <img src={Wishlist} alt="" />
+          </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link " href="#" onClick={()=>{props.switchView('Profile')}} >Profile</a>
+          <a className="nav-link " href="#" onClick={()=>{props.switchView('Profile')}} >
+            <img src={user} alt="" />
+          </a>
         </li>
-     </ul>
+      </ul>
      </div>
      
 

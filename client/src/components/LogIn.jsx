@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import style from '../css/Singup.css'
 import img from '../images/singup.jpg'
 
-const SingUp = (props) => {
-    const[name,setName]=useState("")
+
+const LogIn = (props) => {
+   
     const[email,setEmail]=useState("")
     const[psw,setPsw]=useState("")
 
 
-   const registreprofile=()=>{
-    const body={
-        firstName:name,
+   const loginprofile=()=>{
+    const body={       
         email:email,
         password:psw
     }
-    props.registre(body)
+    props.login(body)
 
    }
 
@@ -37,10 +37,6 @@ const SingUp = (props) => {
                         <h1  className='titleSingup'>Create an account</h1>
                         <h5>Enter your details below</h5>
                     </div>
-                    <div className="form-group">
-                            <input  onChange={(e)=>{setName(e.target.value)}}  type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name"/><br/>
-                           
-                        </div>
                         <div className="form-group">                        
                             <input type="email"  onChange={(e)=>{setEmail(e.target.value)}}  className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/> <br/>                          
                         </div>
@@ -51,9 +47,7 @@ const SingUp = (props) => {
                           
                           
                         </div>
-                        <button type="submit " className="submit-btn btn btn-primary" onClick={()=>{
-                            registreprofile()
-                        }}>Submit</button> <br/>
+                        <button type="submit " className="submit-btn btn btn-primary" onClick={()=>{loginprofile()}}>Submit</button> <br/>
 
                         <label className="form-check-label">Already have account ? <span>Login in</span></label>
                         
@@ -68,4 +62,4 @@ const SingUp = (props) => {
   )
 }
 
-export default SingUp
+export default LogIn
