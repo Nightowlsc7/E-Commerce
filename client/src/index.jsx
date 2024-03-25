@@ -19,6 +19,9 @@ import NavBarreLoged from './components/NavBarreLoged.jsx'
 import NavBarreAdmin from './components/NavBarreAdmin.jsx'
 import MyProducts from './components/MyProducts.jsx'
 import UpdateMyProduct from './components/UpdateMyProduct.jsx'
+import PaymentComponent from './components/PaymentComponent.jsx'
+
+
 
 
 const App = () => {
@@ -31,6 +34,8 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const [category,setCategory]=useState('All') 
   const [myProducts,setMyProducts]=useState([]) 
+  const [totalpayment,setTotal]=useState(0) 
+
 
 
 
@@ -59,6 +64,18 @@ const App = () => {
       
     })
     .catch(()=>{})
+  }
+  const logout =(body)=>{
+    // axios.post(`http://localhost:3000/api/user/logout`,body)
+    // .then((data)=>{
+    //   setProfile("")
+    //   setIsLoged(false)
+    //   switchView('Home')      
+    // })
+    // .catch((error)=>{throw error})
+    console.log(body);
+    setIsLoged(false)
+     switchView('Home')
   }
   const SelectByCategory = (category) => {
     axios.get(`http://localhost:3000/api/product/SearchByCategory/${category}`)
@@ -145,13 +162,18 @@ const App = () => {
     selectOne(id)
     switchView('updateMyProducts')
   }
+  const total=(total)=>{
+    setTotal(2700)
+   ;
+
+  }
 
   return (
     <div>
       {isLoged 
       ? (profile.email==='admin'
       ?<NavBarreAdmin switchView ={switchView} profile={profile}/>
-      :<NavBarreLoged   filterMyProducts={filterMyProducts}switchView ={switchView} profile={profile}/>)
+      :<NavBarreLoged  logout={logout}   filterMyProducts={filterMyProducts}switchView ={switchView} profile={profile}/>)
       :<NavBare switchView ={switchView}/>}
        {view === 'Home' && <Home  SelectByName={SelectByName} SelectByCategory={SelectByCategory} addToCart={addToCart} addToWishList={addToWishList} switchView={switchView} data={data} selectOne={selectOne} />}
        {view === 'SingUp' && <SingUp registre={registre}  login={login } switchView={switchView} />}
@@ -163,10 +185,12 @@ const App = () => {
        {view === 'updateMyProducts' && <UpdateMyProduct  updateProduct={updateProduct} OneProduct={OneProduct} />}
        {view === 'Contact' && <Contact  />}
        {view === 'About' && <About  />}
-       {view === 'Cart' && <Cart cart={cart} />}
+       {view === 'Cart' && <Cart cart={cart}  switchView={switchView} total={total}/>}
        {view === 'Wishlist' && <Wishlist wishlist={wishlist} />}
        {view === 'Profile' && <Profile  profile={profile}/>}
-       { <Footer/> }
+       {view === 'payment' && <PaymentComponent  profile={profile} totalpayment={totalpayment}/>}
+
+       {/* { <Footer/> }   */}
     </div> 
   )
 }

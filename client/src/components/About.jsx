@@ -98,7 +98,7 @@ function About() {
   <div className="row ">
   <div className="col-4">
   <div className="card">
-      <img src="https://s3-alpha-sig.figma.com/img/0881/49fd/5afc043392ee3cbb529f429b3e2098d3?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l1Mb6fOAwvCWZIrjKQtZU4iP1RZh~0MbA9GnHKSwp3C-tHHRAN1afvEXXgEE4mwuKJQ5LPMFjvNhlrugTIfl016mbdFs6B3MR9QASHOeeqRhrskCeFj-qoKYi1zusdQ-UFlh6TcHfCfLVlsPuRGyh-0AG8wcnXF-oDgfJ6P3npznYDnb7Vz4w6ot7uuMrlOwMWu372qb2qRVC~QmPNVOFs26HND5Sqd95ZvRuOM4OYpp8BDCpD~pz79W42UAmLhdbQIewUcpccKSyYya2MHUWqfQv7Ly4UGQGMIsDHWIEE6y2KM2zpQl6cm~tdzEC0Hj0Gyd17vrL1IZhNc~T4-c~g__" className="card-img-top" alt="Skyscrapers"/>
+      <img style={{width:"250px",height:"250px"}} src="https://s3-alpha-sig.figma.com/img/0881/49fd/5afc043392ee3cbb529f429b3e2098d3?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l1Mb6fOAwvCWZIrjKQtZU4iP1RZh~0MbA9GnHKSwp3C-tHHRAN1afvEXXgEE4mwuKJQ5LPMFjvNhlrugTIfl016mbdFs6B3MR9QASHOeeqRhrskCeFj-qoKYi1zusdQ-UFlh6TcHfCfLVlsPuRGyh-0AG8wcnXF-oDgfJ6P3npznYDnb7Vz4w6ot7uuMrlOwMWu372qb2qRVC~QmPNVOFs26HND5Sqd95ZvRuOM4OYpp8BDCpD~pz79W42UAmLhdbQIewUcpccKSyYya2MHUWqfQv7Ly4UGQGMIsDHWIEE6y2KM2zpQl6cm~tdzEC0Hj0Gyd17vrL1IZhNc~T4-c~g__" className="card-img-top" alt="Skyscrapers"/>
       <div className="card-body">
         <h5 className="card-title">Tom Cruise</h5>
         <p className="card-text">
@@ -121,7 +121,7 @@ function About() {
   </div>
   <div className="col-4">
   <div className="card" >
-      <img src="https://s3-alpha-sig.figma.com/img/8438/eab9/a2fe88af0272adecd83422d0cb7e20d7?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WwKZ6cSePiZ3tKJ64yRNRsi3NaB5EVBJCpch4ZrPpxGBLByRJjOxOW8rwaCwOnEJKzxndSWduTNd-GuYjPBkoav6R4A1Dt3Mmg0v3gqKme0NuySJEqetZ2cmG~BtN~MxPWCetpjdSKp38z8XRF9gQNjzXVfTolh8cf3759UBfQTA3ACf~PMiHlGCAc9ZDadZ3~XqNhZE2nrGBVoMl5kNpc7sx3hutXtTX-hcUDqx57BnsobKi39A06i3bU-Ucaqqy3C6DDc7d~zAHMoFlJBLvRx6yqV4N63bR78k-IQ3tmUPEjT9ziR2usE2TYP2vM~mTXxlBUVde~302rvvM764pg__" className="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <img style={{width:"250px",height:"250px"}}  src="https://s3-alpha-sig.figma.com/img/8438/eab9/a2fe88af0272adecd83422d0cb7e20d7?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WwKZ6cSePiZ3tKJ64yRNRsi3NaB5EVBJCpch4ZrPpxGBLByRJjOxOW8rwaCwOnEJKzxndSWduTNd-GuYjPBkoav6R4A1Dt3Mmg0v3gqKme0NuySJEqetZ2cmG~BtN~MxPWCetpjdSKp38z8XRF9gQNjzXVfTolh8cf3759UBfQTA3ACf~PMiHlGCAc9ZDadZ3~XqNhZE2nrGBVoMl5kNpc7sx3hutXtTX-hcUDqx57BnsobKi39A06i3bU-Ucaqqy3C6DDc7d~zAHMoFlJBLvRx6yqV4N63bR78k-IQ3tmUPEjT9ziR2usE2TYP2vM~mTXxlBUVde~302rvvM764pg__" className="card-img-top" alt="Los Angeles Skyscrapers"/>
       <div className="card-body">
         <h5 className="card-title">Emma Watson</h5>
         <p className="card-text">Managing Director</p>
@@ -142,7 +142,7 @@ function About() {
   </div>
   <div className="col-4">
   <div className="card">
-      <img src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
+      <img  style={{width:"250px",height:"250px"}} src="https://s3-alpha-sig.figma.com/img/ede4/8f2b/5df8103b281240ce5bafe5dd7d215ab8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g0pI6ZsrpDq9-veBjhHXPH-aQHX98peljQo2bjmW54Xi5LoWZcFfX2Kfc9sc5VCUkSZm7zR0UZ-4WURrj9xk7fe0JZH2Yfm4Ia15Cj3rxX27ERDHtnyb3s1vLhStVIuZ4se1m2plJKcJY-Zk76aiQztWobhyP8LRmqdOprugZ9ibEJcYSt8JV1cwb7cXTdDVdqALStLSIv2sEwMgd-3JN5Kyw2V9i4bXSXT74cLb79EvhFTETyZu4yo35EuqIwfDDpxM34CU3b0k7Ox~GDHQiQzkUOPmE1~eoo5u6yw6MUsU1zgsBHBFpmauoBuGgXuTI598ZdVb1U-vG~pCisRcyQ__" className="card-img-top" alt="Palm Springs Road"/>
       <div className="card-body">
         <h5 className="card-title">Will</h5>
         <p className="card-text">

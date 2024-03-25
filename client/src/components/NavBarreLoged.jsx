@@ -41,7 +41,10 @@ const NavBarreLoged = (props) => {
           </button>     
      <ul className=' mr-auto mt-2 mt-lg-0' style={{ gap:"20px",listStyleType:"none",display:"flex",paddingTop:"8px"}} >
      <li className="nav-item">
-          <a className="nav-link " href="#" >Logout</a>
+          <a className="nav-link " href="#" onClick={()=>{
+            props.logout(props.profile)
+
+          }}>Logout</a>
       </li>
      <li className="nav-item">
      <span className="nav-link" onClick={() => props.switchView('Cart')}>
