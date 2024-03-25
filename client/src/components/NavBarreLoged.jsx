@@ -6,9 +6,9 @@ import search  from '../images/search.png'
 
 
 
-const NavBare = (props) => {
+const NavBarreLoged = (props) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-light ">
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -25,21 +25,38 @@ const NavBare = (props) => {
         <li className="nav-item">
           <a className="nav-link " href="#" onClick={()=>{props.switchView('About')}} >About</a>
         </li>
-       
-        
+        <li className="nav-item">
+          <a className="nav-link " href="#" onClick={()=>{
+          
+            props.filterMyProducts(props.profile.id)
+            props.switchView('MyProducts')
+            }} >My Products</a>
+        </li>          
       </ul>
       </div>
      <div className='col-3' style={{display:"flex",gap:"1rem"}}>   
-     <input className="" type="search"  style={{height:"32px",marginTop:"8px"}} placeholder="Search" aria-label="Search"/>
+        <input className="" type="search"  style={{height:"32px",marginTop:"8px"}} placeholder="Search" aria-label="Search"/>
         <button className="btn my-2 my-sm-0"  type="submit">
           <img src={search} alt="" />
           </button>     
-     <ul className='mr-auto mt-2 mt-lg-0' style={{ gap:"10px", listStyleType:"none",display:"flex",paddingTop:"8px"}}>
-     <li className="">
-          <a className="nav-link " href="#" onClick={()=>{props.switchView('LogIn')}} >Log In / </a>
+     <ul className=' mr-auto mt-2 mt-lg-0' style={{ gap:"20px",listStyleType:"none",display:"flex",paddingTop:"8px"}} >
+     <li className="nav-item">
+          <a className="nav-link " href="#" >Logout</a>
       </li>
-      <li className="">
-          <a className="nav-link " href="#" onClick={()=>{props.switchView('SingUp')}} > Sign Up</a>
+     <li className="nav-item">
+     <span className="nav-link" onClick={() => props.switchView('Cart')}>
+          🛒
+        </span>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link " href="#" onClick={()=>{props.switchView('Wishlist')}} >
+            <img src={Wishlist} alt="" />
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link " href="#" onClick={()=>{props.switchView('Profile')}} >
+            <img src={user} alt="" />
+          </a>
         </li>
       </ul>
      </div>
@@ -50,4 +67,4 @@ const NavBare = (props) => {
   )
 }
 
-export default NavBare
+export default NavBarreLoged

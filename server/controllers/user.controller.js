@@ -117,4 +117,25 @@ module.exports = {
 
     }
  },
+ updateOne:async function(req,res){
+    try {
+        const user= await db.User.update({
+            firstName:req.body.firstName,
+            email:req.body.email,
+            password:req.body.password,
+            phoneNumber:req.body.phoneNumber
+            
+        },{
+            where:{
+                id:req.params.id
+            }
+        })
+        res.status(200).send(user)
+
+        
+    } catch (error) {
+        throw error
+        
+    }
+ }
 }

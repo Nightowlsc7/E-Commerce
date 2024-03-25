@@ -54,10 +54,8 @@ UpdateOne :async (req, res) => {
     res.status(201).send(product)
     } catch (error) {
     throw error
-
 } 
 },
-
  selectByColor:async function(req,res){
     try { 
         const findColor=req.params.color
@@ -90,4 +88,14 @@ UpdateOne :async (req, res) => {
     }
     catch { (error)=> { throw error} }
  },
+ myProducts:async function(req,res){
+    try {
+        const findId=req.params.userid
+        const project = await db.Products.findAll({ where: { userId: findId } })
+        res.send(project)
+        } catch (error) {
+        throw error
+    } 
+
+ }
 }
