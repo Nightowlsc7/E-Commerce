@@ -12,6 +12,8 @@ import gameconsole from '../images/game-console.png'
 import OneProduct from './OneProduct.jsx';
 
 import ps from '../images/ps.png'
+import slide2 from '../images/slide2.png'
+
 
 
 
@@ -25,15 +27,42 @@ const   HomePage = (props) => {
           <div className="col-3 col-category ">
             <div className="">
             <ul className='category-list'>
-                <li>Woman's Fashion</li>
-                <li>Men's Fashion</li>
-                <li>Electronics</li>
-                <li>Home & Lifestyle</li>
-                <li>Medicine</li>
-                <li>Sports & Outdoor</li>
-                <li>Baby’s & Toys</li>
-                <li>Groceries & Pets</li>
-                <li>Health & Beauty</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Woman's Fashion")
+                  props.switchView('AllProducts')
+                }}>Woman's Fashion</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Men's Fashion")
+                  props.switchView('AllProducts')
+                }}>Men's Fashion</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Electronics")
+                  props.switchView('AllProducts')
+                }}>Electronics</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Home & Lifestyle")
+                  props.switchView('AllProducts')
+                }}>Home & Lifestyle</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Medicine")
+                  props.switchView('AllProducts')
+                }}>Medicine</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Sports & Outdoor")
+                  props.switchView('AllProducts')
+                }}>Sports & Outdoor</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Baby’s & Toys")
+                  props.switchView('AllProducts')
+                }}>Baby’s & Toys</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Groceries & Pets")
+                  props.switchView('AllProducts')
+                }}>Groceries & Pets</li>
+                <li onClick={()=>{
+                  props.SelectByCategory("Health & Beauty")
+                  props.switchView('AllProducts')
+                }}>Health & Beauty</li>
 
               </ul>
             </div>
@@ -101,7 +130,7 @@ const   HomePage = (props) => {
         </div>
         </div>
         <div  style={{textAlign:"center",paddingBottom:"3rem"}}>
-          <button className='btn' style={{position:"absolute",backgroundColor:"red",color:"white"}}>View All Products</button>
+          <button className='btn' style={{position:"absolute",backgroundColor:"red",color:"white"}}  onClick={()=>{props.switchView('AllProducts')}}>View All Products</button>
         </div>
         <hr/>
       </div>
@@ -257,9 +286,56 @@ const   HomePage = (props) => {
         </div>
         </div>
         
-        <hr/>
+      
       </div>
-    </section>  
+    </section> 
+
+    <div className="containere" style={{paddingTop:"5rem"}}>
+      <div className="row">
+       <div className="">
+       <img style={{width:"65%", height:"80%"}}src={slide2} alt="" />
+       </div>
+      </div>
+      </div> 
+
+
+
+      <section>
+    <div className="container" style={{paddingTop:"3rem"}} >
+      <div className="row">
+        <div className="col-12">
+          <h3 style={{textAlign:"start",color:"red"}}>Our Products</h3>
+
+        </div>
+        <div className="row">
+          <div className="col-9">
+            <h1 style={{textAlign:"start"}} >Explore Our Products</h1>
+          </div>
+          <div className="col-3">             
+             <button onClick={()=>{switchView('')}} className='btn' style={{position:"absolute",backgroundColor:"red",color:"white"}}>View All</button>                 
+          </div>
+        </div>
+      </div>
+      <div className="row" style={{height:"100%",paddingTop:"2rem"}}>    
+      {props.data.map((e,i)=>{
+             return ( 
+                <div className="col-3" key={i} >
+             <OneProduct addToCart={props.addToCart} addToWishList={props.addToWishList} 
+             data={e} switchView={props.switchView} selectOne={props.selectOne}/>   
+
+                </div>)
+
+            })}
+       </div>
+       
+     
+    </div>
+  </section>
+
+
+
+
+
     </>
   )
 }

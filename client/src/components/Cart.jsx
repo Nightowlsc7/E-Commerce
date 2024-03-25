@@ -6,10 +6,17 @@ import ps from '../images/ps.png'
 // import parse from 'html-react-parser';
 
 
-function Cart({cart}) {
+function Cart({cart,switchView,total}) {
+    const[totalPayment,setPayment]=useState()
+    const calculTotale=()=>{
+        const x=cart.reduce((total, e) => total + e.price,0,)
+        console.log('x=',x);
+        setPayment(x)
+
+    }
   return (
     
-   <div className="container" style={{paddingTop:"10rem"}}>
+   <div className="container"  style={{paddingTop:"10rem",height:"40rem"}}>
      <div className="cart-list"> 
         <div  className="row">
         <div className="col-3">
@@ -57,7 +64,8 @@ function Cart({cart}) {
         </div>
 
         <div className="cart-total" style={{padding:"5px"}}>
-            <h5 style={{textAlign:"center"}}>Cart Total</h5>
+        
+            <h5 style={{textAlign:"center"}}>Cart Total Total:{cart.reduce((total, e) => total + e.price,0,)}</h5>
             <br />
                 <h6>
                     Subtotal: 
@@ -70,7 +78,13 @@ function Cart({cart}) {
                 <h6>
                     Total:
                 </h6>
-                <button className='Checkout'>Proceed to Checkout</button>
+                <button className='Checkout' onClick={()=>{
+                    calculTotale()
+
+                    total(totalPayment)
+                    switchView('payment')
+                    
+                }}>Proceed to Checkout</button>
             </div>
     </div>
 

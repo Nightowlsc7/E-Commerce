@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from 'axios'
+import style from '../css/Wishlist.css'
 
 const Wishlist = ({wishlist}) => {
   const [wishlistItems, setWishlistItems] = useState([])

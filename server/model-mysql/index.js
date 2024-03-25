@@ -21,6 +21,8 @@ async function connectionTest (){
 db.User=require('./user.Model')(connection,DataTypes)
 db.Products=require('./product.Model')(connection,DataTypes)
 
+db.User.hasMany(db.Products)
+db.Products.belongsTo(db.User)
 
 //  connection.sync({force:true}) 
 // db.User.sync({force:true}) 

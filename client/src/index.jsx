@@ -13,15 +13,31 @@ import Contact from './components/Contact.jsx'
 import  Footer  from './components/Footer.jsx'
 import LogIn from './components/LogIn.jsx'
 import ProductDetailsPage from './components/Productdetails.jsx'
+import  Products  from './components/Products.jsx'
+import AddProduct from './components/AddProduct.jsx'
+import NavBarreLoged from './components/NavBarreLoged.jsx'
+import NavBarreAdmin from './components/NavBarreAdmin.jsx'
+import MyProducts from './components/MyProducts.jsx'
+import UpdateMyProduct from './components/UpdateMyProduct.jsx'
+import PaymentComponent from './components/PaymentComponent.jsx'
+
+
 
 
 const App = () => {
   const [data, setData] = useState([])
   const [view, setView] = useState("Home");
   const [profile, setProfile] = useState({});
+  const [isLoged,setIsLoged]=useState(false)
   const [OneProduct, setOneProduct] = useState({});
   const [wishlist, setOneWishlist] = useState([]);
   const [cart, setCart] = useState([]);
+  const [category,setCategory]=useState('All') 
+  const [myProducts,setMyProducts]=useState([]) 
+  const [totalpayment,setTotal]=useState(0) 
+
+
+
 
   useEffect(() => {
     fetchProducts()
@@ -42,16 +58,33 @@ const App = () => {
   const login =(body)=>{
     axios.post(`http://localhost:3000/api/user/login`,body)
     .then((data)=>{
-      setProfile(data.data)
+      setProfile(data.data.user)
+      setIsLoged(true)
       switchView('Home')
       
     })
     .catch(()=>{})
   }
+  const logout =(body)=>{
+    // axios.post(`http://localhost:3000/api/user/logout`,body)
+    // .then((data)=>{
+    //   setProfile("")
+    //   setIsLoged(false)
+    //   switchView('Home')      
+    // })
+    // .catch((error)=>{throw error})
+    console.log(body);
+    setIsLoged(false)
+     switchView('Home')
+  }
   const SelectByCategory = (category) => {
     axios.get(`http://localhost:3000/api/product/SearchByCategory/${category}`)
 
-      .then((res) =>   setData(res.data))
+      .then((res) =>{
+        setData(res.data)
+        setCategory(category)
+      }
+      )
       .catch((err) => console.log(err))
   } 
    const SelectByName = (name) => {
@@ -74,29 +107,91 @@ const App = () => {
   const addToWishList=(body)=>{
     setOneWishlist([...wishlist,body])
   }
+  const addProduct = (body)=>{
+    try {
+      axios.post('http://localhost:3000/api/product',body)
+      .then(()=>{
+        fetchProducts()
+        setCategory('AllProducts')
+        switchView('AllProducts')
+       })
+      .catch((err)=>{console.log(err);})
+      // console.log(body);
+    } catch (error) {
+      throw error      
+    }
+  }
+  const deleteProduct=(id)=>{
+    // console.log(id);
+    try {
+      axios.delete(`http://localhost:3000/api/product/${id}`)
+      .then(()=>{
+        fetchProducts()
+        switchView('Home')
+      })
+      .catch(()=>{})
+      
+    } catch (error) {
+      
+    }
 
+  }
+  const updateProduct=(id,body)=>{
+    try {
+      axios.patch(`http://localhost:5000/api/product/${id}`,body)
+      .then(()=>{
+        fetchProducts()
+        switchView('Home')
+      })
+      .catch(()=>{})      
+    } catch (error) {
+      console.log(error);      
+    }
 
+  }
+  const filterMyProducts=(userid)=>{
+    axios.get(`http://localhost:3000/api/product/myProducts/${userid}`)
+    .then((data)=>{
+      setMyProducts(data.data.reverse())
+      console.log(myProducts);
+    })
+    .catch(()=>{})
 
+  }
+  const getProductUpdate=(id)=>{
+    selectOne(id)
+    switchView('updateMyProducts')
+  }
+  const total=(total)=>{
+    setTotal(2700)
+   ;
 
+  }
 
   return (
-
     <div>
-      <NavBare switchView ={switchView}/>
-       {view === 'Home' && <Home  addToCart={addToCart} addToWishList={addToWishList}switchView={switchView} data={data} selectOne={selectOne} />}
-       {view === 'Contact' && <Contact  />}
-       {view === 'About' && <About  />}
-       {view === 'Sign Up' && <Home  />}
-       {view === 'Cart' && <Cart cart={cart} />}
-       {view === 'Wishlist' && <Wishlist wishlist={wishlist} />}
-       {view === 'Profile' && <Profile  />}
+      {isLoged 
+      ? (profile.email==='admin'
+      ?<NavBarreAdmin switchView ={switchView} profile={profile}/>
+      :<NavBarreLoged  logout={logout}   filterMyProducts={filterMyProducts}switchView ={switchView} profile={profile}/>)
+      :<NavBare switchView ={switchView}/>}
+       {view === 'Home' && <Home  SelectByName={SelectByName} SelectByCategory={SelectByCategory} addToCart={addToCart} addToWishList={addToWishList} switchView={switchView} data={data} selectOne={selectOne} />}
        {view === 'SingUp' && <SingUp registre={registre}  login={login } switchView={switchView} />}
        {view === 'LogIn' && <LogIn  login={login} />}
+       {view === 'AddProduct' && <AddProduct  addProduct={addProduct} />}
        {view === 'OneProduct' && <ProductDetailsPage  OneProduct={OneProduct} addToCart={addToCart} addToWishList={addToWishList}  />}
-       {/* <Footer/> */}
-    </div>
+       {view === 'AllProducts' && <Products category={category} data={data} addToCart={addToCart} addToWishList={addToWishList} selectOne={selectOne} switchView={switchView}  />}
+       {view === 'MyProducts' && <MyProducts getProductUpdate={getProductUpdate} deleteProduct={deleteProduct} category={category} data={myProducts} addToCart={addToCart} addToWishList={addToWishList} selectOne={selectOne} switchView={switchView}  />}
+       {view === 'updateMyProducts' && <UpdateMyProduct  updateProduct={updateProduct} OneProduct={OneProduct} />}
+       {view === 'Contact' && <Contact  />}
+       {view === 'About' && <About  />}
+       {view === 'Cart' && <Cart cart={cart}  switchView={switchView} total={total}/>}
+       {view === 'Wishlist' && <Wishlist wishlist={wishlist} />}
+       {view === 'Profile' && <Profile  profile={profile}/>}
+       {view === 'payment' && <PaymentComponent  profile={profile} totalpayment={totalpayment}/>}
 
- 
+       {/* { <Footer/> }   */}
+    </div> 
   )
 }
 

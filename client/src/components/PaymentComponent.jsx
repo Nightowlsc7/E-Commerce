@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const Page = () => {
-  const [paymentStatus, setPaymentStatus] = useState('error'); // Change 'error' to 'success' for successful payment
+  const [paymentStatus, setPaymentStatus] = useState('success'); // Change 'error' to 'success' for successful payment
 
-  const handleTryAgain = () => {
+  const handleTryAgain = ({totalpayment}) => {
     // In a real application, this function might involve retrying the payment process with the payment gateway
     // For demonstration, we'll simply simulate a successful payment after retrying
     setPaymentStatus('success');
